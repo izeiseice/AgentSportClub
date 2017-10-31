@@ -2,24 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { HttpModule } from '@angular/http';
-import { GetphotoService } from './services/getphoto.service';
 import { AppComponent } from './app.component';
-import { UserComponent } from './components/user/user.component';
-import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidebarModule } from 'ng-sidebar';
+import { SlidebarService } from './services/slidebar.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
-    AboutusComponent
+    HomeComponent,
+    MenuComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    SidebarModule.forRoot(),
   ],
-  providers: [GetphotoService],
+  providers: [SlidebarService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
