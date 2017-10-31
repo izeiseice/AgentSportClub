@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
+    { path: 'search', component: SearchComponent }
 ];
 
 @NgModule({

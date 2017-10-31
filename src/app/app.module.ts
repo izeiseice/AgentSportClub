@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarModule } from 'ng-sidebar';
 import { SlidebarService } from './services/slidebar.service';
+import { SearchService } from './services/search.service';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { SlidebarService } from './services/slidebar.service';
     HomeComponent,
     MenuComponent,
     NavbarComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,7 @@ import { SlidebarService } from './services/slidebar.service';
     AppRoutingModule,
     SidebarModule.forRoot(),
   ],
-  providers: [SlidebarService],
+  providers: [SlidebarService,SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
