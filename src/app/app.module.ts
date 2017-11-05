@@ -16,12 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarModule } from 'ng-sidebar';
 import { SlidebarService } from './services/slidebar.service';
-<<<<<<< HEAD
-import { SearchService } from './services/search.service';
-import { SearchComponent } from './components/search/search.component';
-=======
 import { UserManagementService } from './services/user-management.service';
->>>>>>> 468a614a29745057f55c07dfeccd428af9318033
+import { SearchComponent} from './components/search/search.component';
+import { SearchService} from './services/search.service';
+
 
 @NgModule({
   declarations: [
@@ -29,13 +27,10 @@ import { UserManagementService } from './services/user-management.service';
     HomeComponent,
     MenuComponent,
     NavbarComponent,
-<<<<<<< HEAD
-    SearchComponent,
-=======
     LoginComponent,
     UserComponent,
     UserManagementComponent,
->>>>>>> 468a614a29745057f55c07dfeccd428af9318033
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +39,7 @@ import { UserManagementService } from './services/user-management.service';
     AppRoutingModule,
     SidebarModule.forRoot()
   ],
-<<<<<<< HEAD
-  providers: [SlidebarService,SearchService],
-=======
-  providers: [SlidebarService,GetphotoService,LoginService,AuthguardGuard,UserManagementService],
->>>>>>> 468a614a29745057f55c07dfeccd428af9318033
+  providers: [SlidebarService,GetphotoService,LoginService,AuthguardGuard,UserManagementService,SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

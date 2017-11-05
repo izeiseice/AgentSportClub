@@ -8,7 +8,7 @@ export class SearchService {
 
   constructor(private http:Http) { }
   getAllUser(){
-    return this.http.get("@ds229435.mlab.com:29435/swusport/student")
+    return this.http.get("")
     .map((res) => res.json());
     }
   
